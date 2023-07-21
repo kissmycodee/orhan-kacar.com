@@ -1,0 +1,239 @@
+$color-red:rgb(128, 0, 0);
+$color-green:rgb(0, 255, 182);
+.heading {
+    overflow-x: hidden;
+    background-color: black;
+    position: relative;
+    h2 {
+        margin: 0;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 50px;
+    }
+}
+
+.myWork-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    background-color: black;
+    button {
+        width: 150px;
+        height: 80px;
+        margin-left: 10px;
+        background-color: black;
+        border: 2px solid $color-red;
+        color: white;
+        font-size: 17px;
+        transition: all 225ms ease-in-out;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-red;
+        }
+        &:focus {
+            background-color: $color-red;
+        }
+    }
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding-bottom: 16px;
+    flex-direction: column;
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    span {
+        color: $color-red;
+        font-weight: 800;
+    }
+}
+
+.project-images {
+    margin-left: 8px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    height: 300px;
+    width: 400px;
+    margin-bottom: 50px;
+    transition: all 125ms ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 2px transparent;
+    img {
+        height: 300px;
+        width: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    &:hover {
+        box-shadow: 0px 0px 12px 2px $color-green;
+        border-radius: 10px;
+        .project-details {
+            transition: all 500ms ease-in-out;
+            opacity: 1;
+        }
+    }
+}
+
+.project-details {
+    opacity: 0;
+    border-radius: 10px;
+    color: black;
+    height: 300px;
+    width: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffffcc;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    backdrop-filter: blur(2px);
+    flex-direction: column;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+    transition: all 225ms ease-in-out;
+    p {
+        margin: 0;
+        width: 100%;
+    }
+    a {
+        color: $color-red;
+        text-decoration: none;
+        transition: all 255ms ease-in-out;
+        &:hover {
+            color: white;
+            transition: all 255ms ease-in-out;
+            background-color: $color-red;
+        }
+    }
+}
+
+.link-btn {
+    background-color: white;
+    padding: 13px;
+    width: 75px;
+    border: 2px solid $color-red;
+    border-radius: 5px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.activated {
+    background-color: $color-red !important;
+}
+
+.f-size-22 {
+    font-size: 22px;
+    h3 {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .heading {
+        h2 {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    .myWork-container {
+        margin-right: 10px;
+        padding-bottom: 25px;
+        button {
+            width: 100px;
+            height: 60px;
+        }
+    }
+    .project-images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        width: 300px;
+        height: 250px;
+        img {
+            width: 300px;
+            height: 250px;
+        }
+    }
+    .project-details {
+        width: 280px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .project-images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        width: 300px;
+        height: 250px;
+        img {
+            width: 300px;
+            height: 250px;
+        }
+    }
+    .project-details {
+        width: 280px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1075px) {
+    .heading {
+        h2 {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    .myWork-container {
+        margin-right: 10px;
+        padding-bottom: 25px;
+        button {
+            width: 100px;
+            height: 60px;
+        }
+    }
+    .project-details {
+        width: 280px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 650px) {
+    .myWork-container {
+        button {
+            width: 90px;
+            height: 50px;
+            font-size: 15px;
+        }
+    }
+}
+
+.mobile-scroll {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 250px;
+}

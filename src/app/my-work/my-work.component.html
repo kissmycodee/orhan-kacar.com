@@ -1,0 +1,92 @@
+<div data-aos="fade-up" class="heading">
+    <h2 >My Work</h2>
+</div>
+<div class="myWork-container" data-aos="zoom-out" data-aos-duration="500">
+    <div>
+        <button  [class.activated]="all" (click)="allProjects()">All</button>
+    </div>
+    <div>
+        <button [class.activated]="angProjects" (click)="angularProjects()">Angular</button>
+
+    </div>
+    <div>
+        <button [class.activated]="jsProjects" (click)="javaProjects()">Javascript</button>
+    </div>
+</div>
+<div class="project-container">
+    <div class="projects">
+
+        <div class="project-images" data-aos="zoom-in-up" data-aos-duration="1000" *ngIf="java">
+            <img src="assets/img/work.png">
+
+            <div class="project-details">
+                <div><span class="f-size-22"><h3>Pokedex</h3></span></div>
+                <p >API based library to check Pokemons from the game.</p>
+                <div class="btn-container">
+                    <a  class="link-btn" href="http://pokedex.orhan-kacar.com" target="_blank">Try it out</a>
+                    <a class="link-btn" href="https://github.com/kissmycodee/pokedex" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-images" data-aos="zoom-in-up" data-aos-duration="1000" *ngIf="java">
+            <img src="assets/img/work.png">
+            <div class="project-details">
+                <div><span class="f-size-22"><h3>El POLLO LOCO</h3> </span></div>
+                <p >
+                    A Jump and Run game based on objectoriented programming</p>
+                <div class="btn-container">
+                    <a  class="link-btn" href="http://el-pollo-loco.orhan-kacar.com" target="_blank">Try it out</a>
+                    <a class="link-btn" href="https://github.com/kissmycodee/El-Pollo-Loco" target="_blank">GitHub</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="project-images" data-aos="zoom-in-up" data-aos-duration="1000" *ngIf="java">
+            <img src="assets/img/work.png">
+            <div class="project-details">
+                <div><span class="f-size-22"><h3>JOIN</h3></span></div>
+                <p >Tasks management system based on Kanban.</p>
+                <div class="btn-container">
+                    <a  class="link-btn" href="http://join.orhan-kacar.com" target="_blank">Try it out</a>
+                    <a class="link-btn" href="https://github.com/kissmycodee/JOIN" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects ">
+        <div class="project-images" data-aos="zoom-in-up" data-aos-duration="1000" *ngIf="java">
+            <img src="assets/img/work.png">
+            <div class="project-details">
+                <div><span class="f-size-22"><h3>Eat-Just</h3></span></div>
+                <p >My first big project.</p>
+                <div class="btn-container">
+                    <a  class="link-btn" target="_blank" href="http://lieferando.orhan-kacar.com">Try it out</a>
+                    <a class="link-btn" target="_blank" href="https://github.com/kissmycodee/LieferandoClone">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-images" data-aos="zoom-in-up" data-aos-duration="1000" *ngIf="angular">
+            <img src="assets/img/work.png">
+            <div class="project-details">
+                <div><span class="f-size-22"><h3>Portfolio</h3></span></div>
+                <p >Angular-based Portfolio.</p>
+                <div class="btn-container">
+                    <a  class="link-btn" href="#top">Go to Top</a>
+                    <a class="link-btn" target="_blank" href="">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-images" data-aos="zoom-in-up" data-aos-duration="1000" *ngIf="angular">
+            <img src="assets/img/work.png">
+            <div class="project-details">
+                <div><span class="f-size-22"><h3>Ring of Fire</h3></span></div>
+                <p >Angular-based web-app of the popular drinking game.</p>
+                <div class="btn-container">
+                    <a  class="link-btn" href="http://ringoffire.dominik-graf.ch" target="_blank">Try it out</a>
+                    <a class="link-btn" href="https://github.com/Dominikg77/ringoffire" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

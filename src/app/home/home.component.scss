@@ -1,0 +1,221 @@
+$color-red:rgb(128, 0, 0);
+$color-green:rgb(0, 255, 182);
+.bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    left: 31%;
+    opacity: 0.4;
+    width: 700px;
+    height: 600px;
+    z-index: -1;
+}
+
+.main-container {
+    margin-top: -50px;
+    height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        color: white;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    strong {
+        color: $color-red;
+    }
+    span {
+        margin-left: -16px;
+        color: $color-green;
+    }
+    button {
+        margin-top: 24px;
+        height: 80px;
+        width: 350px;
+        background-color: transparent;
+        border: 2px solid $color-green;
+        color: $color-green;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 255ms ease-in-out;
+        &:hover {
+            transition: all 255ms ease-in-out;
+            transform: translateY(-10px) translateX(-10px);
+            box-shadow: 9px 9px 4px 0px;
+        }
+    }
+}
+
+.main-img {
+    img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 100%;
+        object-position: center;
+        filter: grayscale(0) blur(0);
+        transition: 300ms ease-in-out;
+        &:hover {
+            filter: grayscale(100%) blur(3px);
+        }
+    }
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+        justify-content: center;
+        transform: translate(-50%, -50%);
+        span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-bottom: 5px solid $color-green;
+            border-right: 5px solid $color-green;
+            transform: rotate(45deg);
+            margin: -10px;
+            animation: animate 3s 3;
+        }
+        span:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+        span:nth-child(3) {
+            animation-delay: -0.4s;
+        }
+    }
+}
+
+
+/*Animation*/
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@media(max-width:1500px) {
+    .main-container {
+        span {
+            padding-left: 3px;
+        }
+        button {
+            height: 80px;
+            width: 300px;
+        }
+    }
+    .main-img {
+        img {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    .bg {
+        top: 25%;
+        left: 32%;
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media(max-width:1250px) {
+    .main-container {
+        span {
+            padding-left: 8px;
+            color: $color-green;
+        }
+        button {
+            height: 60px;
+            width: 250px;
+        }
+    }
+    .main-img {
+        img {
+            width: 280px;
+            height: 280px;
+        }
+    }
+    .bg {
+        top: 35%;
+        left: 32%;
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media(max-width:1075px) {
+    .main-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        img {
+            margin-bottom: 16px;
+        }
+        button {
+            height: 60px;
+            width: 300px;
+        }
+    }
+    .bg {
+        display: none;
+    }
+}
+
+@media(max-width:875px) {
+    .main-container {
+        /* Version 2
+     margin-top: 0px;
+     padding-top: 20px;
+        */
+        margin-top: -50px;
+        padding-bottom: 70px;
+        text-align: start;
+        height: calc(100vh - 80px);
+    }
+    .arrow-container {
+        display: none;
+    }
+}
+
+@media(max-width:600px) {
+    .main-container {
+        padding-top: 55px;
+        margin-left: 24px;
+        margin-right: 24px;
+        span {
+            padding-left: 9.5px;
+            color: $color-green;
+        }
+        img {
+            width: 240px;
+            height: 240px;
+        }
+        button {
+            height: 50px;
+            width: 220px;
+        }
+    }
+    img {
+        width: 48px;
+        height: 48px;
+    }
+    .aos-init {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

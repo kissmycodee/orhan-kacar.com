@@ -1,0 +1,30 @@
+$color-red:rgb(128, 0, 0);
+.imprint {
+    background-color: black;
+    height: 90vh;
+    overflow-y: scroll;
+    color: white;
+    margin-left: 160px;
+    margin-right: 160px;
+    overflow-y: hidden;
+    padding-bottom: 250px;
+    h1 {
+        color: $color-red;
+    }
+}
+
+@media(max-width:875px) {
+    .imprint {
+        padding-top: 100px;
+        padding-bottom: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}

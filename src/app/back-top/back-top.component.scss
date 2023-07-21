@@ -1,0 +1,60 @@
+$color-green:rgb(0, 255, 182);
+.obenkreis {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgba(51, 51, 51, 0.6);
+    /* Hintergrundfarbe (Kreis) */
+    animation: anitop 1s;
+}
+
+@keyframes anitop {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.obenpfeil-1,
+.obenpfeil-2 {
+    border: solid $color-green;
+    /* Farbe Pfeile */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    transition: all 0.2s ease;
+}
+
+.obenpfeil-1 {
+    top: 15px;
+}
+
+.obenpfeil-2 {
+    top: 22px;
+}
+
+.obenkreis:hover .obenpfeil-2 {
+    top: 8px;
+}
+
+#back-top2 {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 1000;
+}
+
+#back-top2 span {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}

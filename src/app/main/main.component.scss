@@ -1,0 +1,26 @@
+.main-container {
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+/*Version 2 80px*/
+
+@media (max-width: 875px) {
+    .skill {
+        scroll-margin-top: 0px;
+    }
+    .work {
+        scroll-margin-top: 0px;
+    }
+    .about {
+        scroll-margin-top: 0px;
+    }
+    .contact {
+        scroll-margin-top: 0px;
+    }
+}

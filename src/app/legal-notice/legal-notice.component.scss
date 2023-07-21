@@ -1,0 +1,49 @@
+$color-red:rgb(128, 0, 0);
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: black;
+    color: white;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+.data-container {
+    h1,
+    h2 {
+        color: $color-red;
+    }
+    h4 {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:875px) {
+    .container {
+        padding-top: 100px;
+        padding-bottom: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .data-container {
+        padding-right: 0;
+        padding-top: 100px;
+        h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+        h3,
+        h4 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
